@@ -5,7 +5,7 @@ household_power <- subset(data,data$Date %in% c('1/2/2007','2/2/2007'))
 
 #### Create datetime formatted column for x axis
 datetime_temp <- paste(household_power$Date,household_power$Time) #create datetime vector
-datetime_temp_fmt <- strptime(datetime,'%Y-%m-%d %H:%M:%S') #format properly
+datetime_temp_fmt <- strptime(datetime_temp,'%d/%m/%Y %H:%M:%S') #format properly
 household_power$datetime <- datetime_temp_fmt #add column to dataframe
 
 #### Create time series plot
